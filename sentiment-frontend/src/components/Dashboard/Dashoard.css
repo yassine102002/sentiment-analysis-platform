@@ -1,0 +1,231 @@
+:root{
+    --secondary-color : hsl(0, 0%, 20%);
+    --primay-color : hsl(0, 0%, 0%);
+    --light-secondary-color : hsl(0, 0%, 80%);
+    --light-primay-color : hsl(0, 0%, 100%);
+    --first-color: #15616d;
+    --second-color: #78290f;
+}
+h5{
+    color : var(--primay-color);
+    font-weight: 700;
+}
+.Dashboard_container{
+    height: 84vh !important;
+    margin-top: 11vh;
+}
+.container h1{
+    display: flex;
+    align-items: center;
+}
+.container h1 span{
+    font-size: 44px;
+}
+
+.grid-container{
+    height: 70vh;
+    width: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 1fr 100px;
+    grid-template-areas: 
+    "accountInfo    postName       postName       postName       NumberOfcomments"
+    "CommentSession CommentSession CommentSession NumberOfViews  NumberOfLikes"
+    "CommentSession CommentSession CommentSession TypeOfPost     RatingOfComments"
+    "CommentSession CommentSession CommentSession TypeOfPost     RatingOfComments"
+    ;
+    column-gap: 15px;
+    row-gap: 15px;
+    margin-top: 10px;
+}
+.accountInfo{
+    grid-area: accountInfo;
+}
+div.accountInfo{
+    background-color: var(--second-color);
+    color: var(--light-primay-color);
+}
+div.accountInfo .p2 .titleSession span,
+div.accountInfo .p2 .titleSession h5{
+    color: var(--light-secondary-color);
+}
+div.accountInfo .p2 h5{
+    color: var(--light-primay-color);
+}
+
+.accountInfo .p1,.accountInfo .p2{
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.accountInfo .p1{
+    width: 30%;
+}
+.accountInfo .p2{
+    width: 70%;
+    margin-left: 20px;
+    gap: 10px;
+}
+.titleSession {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+.titleSession h5 , .titleSession .material-symbols-outlined{
+    color : var(--secondary-color);
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+}
+div.postName , div.NumberOfcomments , div.NumberOfComments , div.NumberOfLikes , div.RatingOfComments, div.NumberOfViews, div.TypeOfPost{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.RatingOfComments .RatingDisplay {
+    height: 70%;
+    width: 90%;
+}
+
+.RatingDisplay .positiveC, .RatingDisplay .NegativeC {
+    height: 49%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+}
+.RatingDisplay .NegativeC{
+    background-color: var(--second-color);
+}
+.RatingDisplay .positiveC{
+    background-color: rgb(0, 86, 41);
+}
+
+.postName{
+    grid-area: postName;
+}
+div.RatingOfComments ,div.NumberOfComments {
+    background-color: var(--first-color);
+    color: var(--light-primay-color);
+}
+div.NumberOfComments{
+    grid-area: NumberOfcomments;
+}
+div.NumberOfComments div.titleSession span,
+div.NumberOfComments div.titleSession h5 ,
+div.NumberOfLikes div.titleSession span,
+div.NumberOfLikes div.titleSession h5 ,
+div.RatingOfComments div.titleSession span,
+div.RatingOfComments div.titleSession h5{
+    color: var(--light-secondary-color);
+}
+div.NumberOfComments h5 , div.NumberOfLikes h5{
+    color: var(--light-primay-color);
+}
+div.NumberOfLikes{
+    grid-area: NumberOfLikes;
+    background-color: var(--second-color);
+}
+div.RatingOfComments{
+    grid-area: RatingOfComments;
+}
+div.NumberOfViews{
+    grid-area: NumberOfViews;
+}
+div.TypeOfPost{
+    grid-area: TypeOfPost;
+}
+div.TypeOfPost img{
+    height: 60%;
+    width: 85%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+div.CommentSession{
+    grid-area: CommentSession;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    flex-direction: column;
+
+}
+.CommentSessionParts{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    gap: 20px;
+}
+.CommentSessionParts .CommentSession1 ,
+.CommentSessionParts .CommentSession2{
+width: 50%;
+background-color: var(--first-color);
+border-radius: 10px;
+}
+.CommentSessionParts div.CommentSession2{
+background-color: var(--second-color);
+}
+.items{
+    background-color: #fef6ed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(213, 213, 213);
+    color: black;
+    scale: 1;
+    transition: 0.3s;
+    
+}
+.accountImg{
+    width: 4rem;
+    border-radius: 100%;
+    height: 4rem;
+    object-fit: cover;
+}
+.item1{
+
+}
+@media only screen and (max-width:1000px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4fr 1.5fr 1fr 2fr;
+        grid-template-areas: 
+    "header header"
+    "comments likes"
+    "views views"
+    "comemntsR comemntsR"
+    ;
+}
+}
+
+@media only screen and (max-width:550px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr 1fr 1.2fr 1fr;
+        grid-template-areas: 
+    "comments"
+    "header"
+    "likes"
+    "views"
+    "comemntsR"
+    ;
+    height: 90vh;
+    margin-bottom: 100px;
+
+    }
+}

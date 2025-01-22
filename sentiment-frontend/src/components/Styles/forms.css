@@ -1,0 +1,36 @@
+.container h2.text-center{
+    text-align: center !important;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.form-control {
+    transition: var(--transition-slow);
+    background: none;
+  }
+  
+  .form-control:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+  
+  .link-input input {
+    background-color: #dedede;
+    border: none;
+    border-right: 5px solid #574300;
+    width: 500px !important;
+  }
+  
+  .link-input input::placeholder {
+    color: #202020;
+  }
+  
+
+  img.title-icon {
+    width: 30px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}

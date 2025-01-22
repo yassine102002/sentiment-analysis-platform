@@ -1,0 +1,12 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playwrite+AU+VIC+Guides&family=Rubik+Vinyl&family=Playwrite+AU+SA:wght@100..400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Styles */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--light-color);
+}
+
+input, button {
+  font-family: var(--font-primary);
+}

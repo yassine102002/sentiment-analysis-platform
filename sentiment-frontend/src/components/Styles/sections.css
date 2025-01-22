@@ -1,0 +1,25 @@
+.account_section, .logo_section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo_section img {
+    width: 100px;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .page {
+    display: flex;
+    align-items: center;
+  }
+
+  
+  

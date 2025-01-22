@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #15616d;
+    --secondary-color: #78290f;
+    --light-color: #fdf8f2;
+    --text-color: #ffffff;
+    --font-primary: "Montserrat", serif;
+    --font-secondary: "Playwrite AU SA", serif;
+    --font-title: "Playwrite AU VIC Guides", serif;
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --box-shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 6px 10px rgba(0, 0, 0, 0.2);
+    --border-radius: 10px;
+  }
+  

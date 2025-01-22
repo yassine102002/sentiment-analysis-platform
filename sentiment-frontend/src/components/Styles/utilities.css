@@ -1,0 +1,25 @@
+.vh-90 {
+    height: 84vh !important;
+    margin-top: 8vh;
+  }
+  
+  .user_logo {
+    width: 50px;
+    border-radius: 100px;
+    margin: 10px 0;
+    transition: var(--transition-slow);
+  }
+  img.logoofpage {
+    width: 300px;
+}
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .nav-item img {
+    width: 25px;
+  }
+  

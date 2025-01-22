@@ -1,0 +1,33 @@
+.button, .navbar-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: var(--box-shadow-light);
+  }
+  
+  .navbar-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    border: 2px solid var(--text-color);
+    border-radius: 30px;
+    text-decoration: none;
+  }
+  
+  .button:hover, .navbar-btn:hover {
+    background-color: rgba(23, 149, 169, 0.91);
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+  
+  .button:active {
+    transform: translateY(0);
+  }
+  

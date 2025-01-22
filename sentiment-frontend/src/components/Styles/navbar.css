@@ -1,0 +1,11 @@
+.navbar-logo {
+    font-family: var(--font-secondary);
+    font-weight: 400;
+  }
+  
+  .navbar {
+    z-index: 100;
+    background-color: var(--primary-color);
+    height: 8vh;
+  }
+  
