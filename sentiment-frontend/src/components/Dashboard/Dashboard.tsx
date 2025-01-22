@@ -5,8 +5,9 @@ import profiletest from "../../assets/Img_testing/aymen.jpg";
 const Dashboard = () => {
   const location = useLocation();
   const link = location.state?.link; // Access the passed link
-  const [postData, setPostData] = useState<{ post_id: string; post_type: string } | null>(null);
-  const [error, setError] = useState<string | null>(null);  useEffect(() => {
+  const [postData, setPostData] = useState<any | null>(null);
+  const [error, setError] = useState<string | null>(null);  
+  useEffect(() => {
     if (link) {
       const fetchInstagramData = async () => {
         try {
@@ -65,21 +66,21 @@ const Dashboard = () => {
             <span className="material-symbols-outlined">sticky_note</span>
             <h5>Post Name</h5>
           </div>
-          <h5>{postData ? postData.post_id : 'Loading...'}</h5>
+          <h5>{postData ? postData.postInfo[0].id : 'Loading...'}</h5>
         </div>
         <div className="items NumberOfComments">
           <div className="titleSession">
             <span className="material-symbols-outlined">sticky_note</span>
             <h5>Comments</h5>
           </div>
-          <h5>150</h5>
+          <h5>{postData ? postData.postInfo[0].commentsCount : 'Loading...'}</h5>
         </div>
         <div className="items NumberOfLikes">
           <div className="titleSession">
             <span className="material-symbols-outlined">favorite</span>{" "}
             <h5>Likes</h5>
           </div>
-          <h5>641</h5>
+          <h5>{postData ? postData.postInfo[0].commentsCount : 'Loading...'}</h5>
         </div>
         <div className="items NumberOfViews">
           <div className="titleSession">
@@ -95,7 +96,7 @@ const Dashboard = () => {
             </span>{" "}
             <h5>Type</h5>
           </div>
-          <h5>{postData ? postData.post_type : 'Loading...'}</h5>
+          <h5>{postData ? postData.postInfo[0].caption : 'Loading...'}</h5>
           <img src="https://unblast.com/wp-content/uploads/2018/07/Instagram-Mockup-1.jpg"></img>
         </div>
         <div className="items RatingOfComments">
@@ -108,13 +109,13 @@ const Dashboard = () => {
               <span className="material-symbols-outlined">
                 sentiment_satisfied
               </span>
-              60%
+              {postData ? postData.sentimentAnalysis.positive_percentage.toFixed(2) + "%" : 'Loading...'}
             </div>
             <div className="NegativeC">
               <span className="material-symbols-outlined">
                 sentiment_dissatisfied
               </span>
-              40%
+              {postData ? postData.sentimentAnalysis.negative_percentage.toFixed(2) + "%" : 'Loading...'}
             </div>
           </div>
         </div>
