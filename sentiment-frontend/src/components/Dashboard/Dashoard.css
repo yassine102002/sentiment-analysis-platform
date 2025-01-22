@@ -159,23 +159,59 @@ div.CommentSession{
     justify-content: flex-start;
     padding: 20px;
     flex-direction: column;
-
+    overflow: auto;
+}
+div.CommentSession .title{
+    margin-bottom: 20px;
+    display: flex;
+    gap: 5px;
 }
 .CommentSessionParts{
     width: 100%;
     height: 90%;
     display: flex;
     gap: 20px;
+    flex-direction: column;
+
 }
-.CommentSessionParts .CommentSession1 ,
-.CommentSessionParts .CommentSession2{
-width: 50%;
-background-color: var(--first-color);
-border-radius: 10px;
+.CommentSessionParts .comment{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gainsboro;
+    height: 90px;
 }
-.CommentSessionParts div.CommentSession2{
-background-color: var(--second-color);
+.CommentSessionParts .comment .CommentHeader ,.CommentSessionParts .comment .CommentHeader .profile_Name{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
 }
+.LikesNumberOfComment{
+    display: flex
+;
+    align-items: center;
+    justify-content: space-around;
+    width: 40px;
+    margin-right: 5px;
+}
+
+
+.CommentSessionParts .comment .CommentHeader img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.CommentSessionParts .comment .CommentHeader h5{
+    color : var(--secondary-color);
+    margin: 0;
+}
+.CommentCaption p{
+    font-weight: 500;
+}
+
 .items{
     background-color: #fef6ed;
     width: 100%;

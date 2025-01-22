@@ -51,11 +51,7 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
         </div>
-        <form className="account_section">
-          <Link to={'/Register'}>
-            <button className="navbar-btn">Create account</button>
-          </Link>
-        </form>
+
       </div>
     </nav>
   );
